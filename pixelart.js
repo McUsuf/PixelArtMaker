@@ -17,7 +17,6 @@ function createPane(){
             pixel.className += ' brick';
             pixel.addEventListener('click', paintPixel);
             pixel.addEventListener('mousedown', mouseDown);
-            pixel.addEventListener('mouseup', mouseUp);
             pixel.addEventListener('mouseenter', enterPaint);
             rowPixels.push(pixel);
         }
@@ -57,6 +56,6 @@ function mouseUp(){
     downedMouse = false;
 }
 
+document.addEventListener('mouseup', mouseUp);
 createPane();
-
 document.getElementById("clrBtn").addEventListener('click', clrCanvas);
